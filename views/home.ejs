@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Blog</title>
+    <link href="/home.css" rel="stylesheet">
+</head>
+<body>
+    <div class="introduction">
+        <h1> Welcome to my Blog website, this made using a combination of node.js express.js and ejs</h1>
+        <p> Press the post button to get started all your posts and posts from other will appear on this page</p>
+        <p>Lets get reading :)</p>
+    </div>
+    <div class="userposts">
+        <% if (locals.posts) {%>            
+                <% for (let i = 0; i < posts.length; i++) {%>
+                <div class="posts">
+                    <h3 style="text-align: center; margin-left: 0px;"><%= posts[i]["title"] %> </h3>
+                    <p><%= posts[i]["content"] %> </p>                
+                </div>
+                <% } %>
+            
+        <% } else { %>
+            <p>There are no posts yet :(</p>
+        <% } %>
+    </div>
+</body>
+</html>
+<%- include("partials/footer.ejs") %>

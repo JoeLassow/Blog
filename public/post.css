@@ -1,0 +1,29 @@
+body {
+    background: linear-gradient(to bottom, rgb(221, 244, 180), rgb(180, 221, 190));
+}
+form {
+    text-align: center;
+    margin: 25px;
+}
+input {
+    width: 70%;
+    border-radius: 7px;
+    margin-top: 25px;
+}
+.maindata {
+    height: 20vh;
+    overflow-wrap: break-word;
+    line-height: 70%;
+    text-align: left;
+}
+.button {
+    margin-top: 25px;
+    width: 20%;
+    opacity: 0.7;
+    transition: 0.3;
+}
+h1 {
+    text-align: center;
+}
+.button:hover {opacity: 1;
+    font-weight: bold;}

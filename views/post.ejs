@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="/post.css" rel="stylesheet">   
+</head>
+<body>
+    <% if (locals.message)  {%>
+        <h1><%= message %></h1>
+    <% } %>
+    <form action="/submit" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="Author">Author:</label><br>
+        <input type="text" id="author" name="author" required> <br> 
+        <label for="content">Content:</label><br>
+        <input class="maindata" type="text" id="content" name="content" required>  <br>
+        <br>
+        <input class="button" type="submit" value="Post">
+        
+    </form>
+</body>
+</html>
+
+
+<%- include("partials/footer.ejs") %>
